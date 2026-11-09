@@ -1,512 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Neha Malik – AI-Driven Test Automation &amp; Quality Engineering Leader</title>
-<meta name="description" content="Neha Malik – Software Test Architect and AI automation leader with nearly 12 years in enterprise quality engineering. Ex-Accenture Associate Manager, Durham MBA 2027."/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neha Malik | Software Test Architect and AI Automation Leader</title>
+<meta name="description" content="Neha Malik: software test architect and AI automation leader with nearly 12 years in enterprise quality engineering. Ex-Accenture Associate Manager, Durham MBA 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --ink:#111318;
-  --ink2:#2c3140;
-  --muted:#6b7280;
-  --faint:#9ca3af;
-  --gold:#9a7d4a;
-  --gold-lt:#c4a96b;
-  --line:#e5e7eb;
-  --bg:#ffffff;
-  --bg2:#f9f8f6;
+  --ink:#1b2430;
+  --ink-soft:#3a4656;
+  --muted:#5e6b7a;
+  --paper:#f7f9fb;
+  --white:#ffffff;
+  --rule:#dde3ea;
+  --pass:#2f8f6b;
+  --pass-tint:#e3f2ec;
+  --signal:#4b5bd7;
+  --signal-tint:#eceefc;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
 }
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:var(--signal)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+@media(max-width:640px){.wrap{padding:0 20px}body{font-size:16px}}
 
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
-.nav-w{max-width:1080px;margin:auto;padding:0 2.5rem;height:56px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--ink);letter-spacing:.04em}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:2.2rem;list-style:none}
-.nav-links a{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--ink)}
-@media(max-width:780px){.nav-links{gap:1rem}.nav-links li:nth-child(3){display:none}}
+/* header */
+.site-head{position:sticky;top:0;z-index:20;background:rgba(247,249,251,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--display);font-weight:700;font-size:20px;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.site-nav{display:flex;gap:28px;list-style:none}
+.site-nav a{color:var(--ink-soft);text-decoration:none;font-size:15px;font-weight:500}
+.site-nav a:hover{color:var(--signal)}
+@media(max-width:760px){.site-nav{gap:16px}.site-nav li.opt{display:none}}
 
-/* ── HERO ── */
-.hero{padding:140px 2.5rem 100px;max-width:1080px;margin:auto;display:grid;grid-template-columns:1fr 340px;gap:5rem;align-items:center}
-@media(max-width:780px){.hero{grid-template-columns:1fr;padding:110px 1.5rem 60px}}
-.hero-eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5.5vw,4.2rem);font-weight:600;color:var(--ink);line-height:1.08;margin-bottom:1.4rem;letter-spacing:-.01em}
-.hero-sub{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:480px;margin-bottom:2rem;font-weight:400}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:var(--ink);color:#fff;padding:.7rem 1.8rem;font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
-.btn-primary:hover{background:var(--ink2)}
-.btn-secondary{border:1px solid var(--line);color:var(--muted);padding:.7rem 1.8rem;font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .2s}
-.btn-secondary:hover{border-color:var(--ink);color:var(--ink)}
-.hero-card{border:1px solid var(--line);padding:2rem}
-.hero-card-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:1.5rem;font-weight:500}
-.metric-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.metric{padding-bottom:1.2rem;border-bottom:1px solid var(--line)}
-.metric:nth-child(3),.metric:nth-child(4){padding-bottom:0;border-bottom:none}
-.metric-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--ink);line-height:1}
-.metric-lbl{font-size:.68rem;color:var(--faint);margin-top:.3rem;letter-spacing:.06em;line-height:1.4}
+/* hero */
+.hero{padding:88px 0 72px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(56px,9vw,112px);line-height:.95;letter-spacing:-.035em;color:var(--ink)}
+.hero-lede{margin-top:28px;max-width:640px;font-size:clamp(19px,2vw,22px);line-height:1.55;color:var(--ink-soft)}
+.hero-actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;transition:background .15s,color .15s}
+.btn-solid{background:var(--ink);color:var(--white)}
+.btn-solid:hover{background:var(--signal)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--white)}
 
-/* ── DIVIDER ── */
-.divider{border:none;border-top:1px solid var(--line);margin:0}
+/* career pipeline (signature element) */
+.pipeline{margin-top:72px;background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:28px 28px 24px}
+.pipeline-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.pipeline-title{font-family:var(--display);font-weight:600;font-size:18px}
+.pipeline-status{font-size:14px;color:var(--pass);font-weight:600;display:flex;align-items:center;gap:8px}
+.pipeline-status::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--pass)}
+.stages{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);position:relative}
+.stages::before{content:"";position:absolute;top:13px;left:calc(100%/12);right:calc(100%/12);height:2px;background:var(--rule)}
+.stages::after{content:"";position:absolute;top:13px;left:calc(100%/12);height:2px;background:var(--pass);width:calc(100% - 100%/6);transform-origin:left;animation:fill 1.6s ease-out .3s both}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.stage{position:relative;z-index:1;text-align:center;padding:0 6px}
+.node{width:28px;height:28px;margin:0 auto 14px;border-radius:50%;background:var(--pass);display:grid;place-items:center;animation:pop .35s ease-out both}
+.node svg{width:14px;height:14px;stroke:#fff;stroke-width:3;fill:none}
+.stage:nth-child(1) .node{animation-delay:.35s}.stage:nth-child(2) .node{animation-delay:.6s}.stage:nth-child(3) .node{animation-delay:.85s}
+.stage:nth-child(4) .node{animation-delay:1.1s}.stage:nth-child(5) .node{animation-delay:1.35s}.stage:nth-child(6) .node{animation-delay:1.6s}
+@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+.node.running{background:var(--white);border:2.5px solid var(--signal);box-shadow:0 0 0 6px var(--signal-tint)}
+.node.running::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--signal)}
+.stage-year{font-size:13px;color:var(--muted);font-weight:500}
+.stage-role{font-family:var(--display);font-weight:600;font-size:15px;line-height:1.25;margin-top:2px}
+.stage-org{font-size:13px;color:var(--muted);margin-top:2px}
+@media(max-width:860px){
+  .stages{grid-template-columns:1fr;gap:18px}
+  .stages::before,.stages::after{left:13px;right:auto;top:14px;bottom:14px;width:2px;height:auto}
+  .stages::after{transform-origin:top;animation-name:fillv}
+  .stage{display:grid;grid-template-columns:28px 1fr;column-gap:16px;text-align:left;padding:0}
+  .node{margin:0;grid-row:span 3}
+}
+@keyframes fillv{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 
-/* ── SECTION BASE ── */
-.sec{padding:80px 2.5rem}
-.sec-w{max-width:1080px;margin:auto}
-.sec-head{margin-bottom:3rem}
-.sec-eyebrow{font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.1rem);font-weight:600;color:var(--ink)}
-.sec-alt{background:var(--bg2)}
+/* sections */
+.section{padding:88px 0;border-top:1px solid var(--rule)}
+.section-alt{background:var(--white)}
+.section h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,4vw,46px);line-height:1.08;letter-spacing:-.02em;max-width:760px}
+.section-intro{margin-top:16px;max-width:640px;color:var(--muted);font-size:18px}
 
-/* ── ABOUT ── */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-@media(max-width:700px){.about-grid{grid-template-columns:1fr;gap:2.5rem}}
-.about-quote{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:400;font-style:italic;color:var(--ink2);line-height:1.6;border-left:2px solid var(--gold);padding-left:1.4rem;margin-bottom:1.8rem}
-.about-body p{font-size:.9rem;color:var(--muted);line-height:1.9;margin-bottom:1rem}
-.about-right{display:flex;flex-direction:column;gap:1.2rem}
-.highlight-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.4rem;border:1px solid var(--line)}
-.hi-icon{width:36px;height:36px;border:1px solid var(--gold-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.hi-icon svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5}
-.hi-label{font-size:.75rem;font-weight:600;color:var(--ink);letter-spacing:.04em;margin-bottom:.3rem;text-transform:uppercase}
-.hi-text{font-size:.8rem;color:var(--muted);line-height:1.6}
+/* results as passed checks */
+.results{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.result{padding:26px 28px 6px 0}
+.result + .result{padding-left:28px;border-left:1px solid var(--rule)}
+.result-figure{font-family:var(--display);font-weight:800;font-size:clamp(40px,5vw,56px);letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.result-figure small{font-size:.5em;font-weight:600;color:var(--muted);letter-spacing:0}
+.result p{margin-top:12px;color:var(--ink-soft);font-size:16px}
+.check{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:13px;font-weight:600;color:var(--pass);background:var(--pass-tint);padding:4px 10px;border-radius:99px}
+@media(max-width:820px){.results{grid-template-columns:1fr}.result + .result{padding-left:0;border-left:none;border-top:1px solid var(--rule)}}
 
-/* ── SKILLS ── */
-.skills-cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;border:1px solid var(--line)}
-.skill-cell{padding:1.6rem;background:var(--bg)}
-.skill-cell:hover{background:var(--bg2)}
-.sc-label{font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
-.sc-tags{display:flex;flex-wrap:wrap;gap:.4rem}
-.sc-tag{font-size:.75rem;color:var(--ink2);background:var(--bg2);padding:.25rem .7rem;border:1px solid var(--line)}
+/* AI flow */
+.ai-grid{margin-top:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+@media(max-width:900px){.ai-grid{grid-template-columns:1fr;gap:40px}}
+.flow{list-style:none;counter-reset:step}
+.flow li{counter-increment:step;position:relative;padding:0 0 26px 56px}
+.flow li::before{content:counter(step);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:8px;background:var(--signal-tint);color:var(--signal);font-family:var(--display);font-weight:700;display:grid;place-items:center}
+.flow li::after{content:"";position:absolute;left:17px;top:40px;bottom:4px;width:2px;background:var(--rule)}
+.flow li:last-child::after{display:none}
+.flow h3{font-family:var(--display);font-weight:600;font-size:19px}
+.flow p{color:var(--muted);font-size:16px;margin-top:2px}
+.ai-side{display:flex;flex-direction:column;gap:20px}
+.panel{border:1px solid var(--rule);border-radius:10px;padding:24px;background:var(--paper)}
+.section-alt .panel{background:var(--paper)}
+.panel h3{font-family:var(--display);font-weight:600;font-size:20px;line-height:1.25}
+.panel p{margin-top:8px;color:var(--ink-soft);font-size:16px}
+.panel a{display:inline-block;margin-top:14px;font-weight:600;text-decoration:none}
+.panel a:hover{text-decoration:underline}
+.panel-feature{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.panel-feature p{color:#c9d2dd}
+.panel-feature a{color:#aab4ff}
 
-/* ── DOMAINS ── */
-.domain-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem}
-.domain-item{padding:1.8rem 1.6rem;border:1px solid var(--line);transition:border-color .2s}
-.domain-item:hover{border-color:var(--gold-lt)}
-.di-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--line);line-height:1;margin-bottom:.8rem}
-.di-name{font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;letter-spacing:.02em}
-.di-sub{font-size:.78rem;color:var(--muted);line-height:1.6}
+/* capabilities */
+.caps{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:40px 56px}
+@media(max-width:760px){.caps{grid-template-columns:1fr;gap:32px}}
+.cap h3{font-family:var(--display);font-weight:600;font-size:21px;padding-top:16px;border-top:2px solid var(--ink)}
+.cap p{margin-top:8px;color:var(--ink-soft)}
+.cap .tools{margin-top:12px;font-size:14px;color:var(--muted)}
 
-/* ── AI ── */
-.ai-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem}
-.ai-item{padding:2rem 1.8rem;background:var(--ink);position:relative;overflow:hidden}
-.ai-item::before{content:'';position:absolute;top:0;left:0;width:2px;height:100%;background:var(--gold)}
-.ai-title{font-size:.8rem;font-weight:600;color:#fff;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.8rem}
-.ai-text{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.75}
+/* experience */
+.jobs{margin-top:48px;list-style:none}
+.job{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:32px 0;border-top:1px solid var(--rule)}
+.job:first-child{border-top:2px solid var(--ink)}
+@media(max-width:760px){.job{grid-template-columns:1fr;gap:10px}}
+.job-when{font-size:15px;color:var(--muted);font-weight:500}
+.job-org{font-family:var(--display);font-weight:700;font-size:18px;color:var(--ink);margin-top:4px}
+.job-title{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.25}
+.job-sub{color:var(--muted);font-size:15px;margin-top:4px}
+.job-now{display:inline-block;margin-left:10px;vertical-align:middle;font-family:var(--body);font-size:12px;font-weight:600;color:var(--signal);background:var(--signal-tint);padding:3px 9px;border-radius:99px}
+.job ul{margin-top:14px;padding-left:18px}
+.job li{margin-top:8px;color:var(--ink-soft);font-size:16px}
+.job li::marker{color:var(--pass)}
+.job li b{color:var(--ink);font-weight:600}
+.job-about{margin-top:12px;color:var(--ink-soft);font-size:16px;max-width:640px}
 
-/* ── TIMELINE ── */
-.tl{position:relative}
-.tl-item{display:grid;grid-template-columns:180px 1fr;gap:2.5rem;padding:0 0 3rem;border-bottom:1px solid var(--line);margin-bottom:3rem}
-.tl-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-@media(max-width:680px){.tl-item{grid-template-columns:1fr}}
-.tl-left{padding-top:.25rem}
-.tl-date{font-size:.72rem;color:var(--faint);letter-spacing:.08em;font-weight:500;margin-bottom:.3rem}
-.tl-co{font-size:.78rem;font-weight:600;color:var(--gold);letter-spacing:.04em}
-.tl-right{}
-.tl-role{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:.15rem}
-.tl-sub{font-size:.78rem;color:var(--faint);margin-bottom:.7rem;letter-spacing:.02em}
-.tl-tag{display:inline-block;font-size:.63rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-lt);padding:.15rem .55rem;margin-bottom:.9rem}
-.tl-bullets{list-style:none;padding:0}
-.tl-bullets li{font-size:.82rem;color:var(--muted);padding:.2rem 0 .2rem 1.1rem;position:relative;line-height:1.7}
-.tl-bullets li::before{content:'';position:absolute;left:0;top:.62rem;width:5px;height:1px;background:var(--gold)}
-.tl-bullets li strong{color:var(--ink2);font-weight:600}
+/* skills */
+.skills{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:36px 32px}
+@media(max-width:900px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.skills{grid-template-columns:1fr}}
+.skills h3{font-family:var(--display);font-weight:600;font-size:17px;margin-bottom:10px}
+.skills ul{list-style:none}
+.skills li{font-size:15px;color:var(--ink-soft);padding:5px 0;border-bottom:1px solid var(--rule)}
 
-/* ── EDUCATION ── */
-.edu-grid{margin-top:3.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.edu-card{padding:2rem;border:1px solid var(--line)}
-.edu-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.4rem}
-.edu-deg{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--ink)}
-.edu-meta{font-size:.8rem;color:var(--muted);margin-top:.2rem;line-height:1.6}
+/* education */
+.edu{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:860px){.edu{grid-template-columns:1fr}}
+.edu .panel{background:var(--white)}
+.edu ul{margin-top:10px;padding-left:18px;color:var(--ink-soft);font-size:15px}
+.edu li{margin-top:4px}
+.edu li::marker{color:var(--pass)}
 
-/* ── CONTACT ── */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-@media(max-width:680px){.contact-grid{grid-template-columns:1fr;gap:2rem}}
-.contact-lead{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:1rem}
-.contact-sub{font-size:.85rem;color:var(--muted);line-height:1.8}
-.contact-links{display:flex;flex-direction:column;gap:.8rem}
-.cl{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;border:1px solid var(--line);text-decoration:none;transition:border-color .2s;color:var(--ink)}
-.cl:hover{border-color:var(--gold-lt)}
-.cl-icon{width:32px;height:32px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.cl-icon svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:1.5}
-.cl-label{font-size:.68rem;color:var(--faint);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.1rem}
-.cl-val{font-size:.82rem;color:var(--ink);font-weight:500}
+/* contact */
+.contact{padding:96px 0;background:var(--ink);color:var(--white)}
+.contact h2{font-family:var(--display);font-weight:700;font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.025em;max-width:820px}
+.contact p{margin-top:18px;max-width:620px;color:#c9d2dd;font-size:18px}
+.contact-list{margin-top:40px;display:grid;grid-template-columns:repeat(4,auto);gap:16px 40px;justify-content:start;list-style:none}
+@media(max-width:860px){.contact-list{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.contact-list{grid-template-columns:1fr}}
+.contact-list span{display:block;font-size:13px;color:#8d9aab;margin-bottom:2px}
+.contact-list a,.contact-list strong{color:var(--white);font-weight:500;text-decoration:none;font-size:16px}
+.contact-list a:hover{color:#aab4ff;text-decoration:underline}
+.contact a:focus-visible{outline-color:#aab4ff}
+footer{background:var(--ink);color:#8d9aab;font-size:14px;padding:0 0 40px}
+footer .wrap{border-top:1px solid #2e3a49;padding-top:24px}
 
-footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;font-size:.72rem;color:var(--faint);letter-spacing:.08em}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-w">
-    <div class="nav-logo">Neha <span>Malik</span></div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#domains">Roles</a></li>
-      <li><a href="#ai">AI Work</a></li>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">Neha Malik</a>
+    <ul class="site-nav">
+      <li class="opt"><a href="#results">Results</a></li>
+      <li><a href="#ai">AI work</a></li>
+      <li class="opt"><a href="#capabilities">How I work</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
-</nav>
+</header>
 
-<!-- HERO -->
-<div style="max-width:1080px;margin:auto;padding:0 2.5rem"><hr class="divider" style="margin-top:56px"></div>
-<div style="max-width:1080px;margin:auto" class="hero">
-  <div>
-    <p class="hero-eyebrow">AI-Driven Test Automation &nbsp;·&nbsp; Quality Engineering &nbsp;·&nbsp; Durham MBA ’27</p>
-    <h1>Neha<br>Malik</h1>
-    <p class="hero-sub">Software test architect and AI automation leader with nearly 12 years of enterprise quality engineering. Ex-Accenture Associate Manager who builds automation frameworks, reviews CI/CD pipelines and turns AI proofs of concept into tools teams actually adopt — now adding strategy and finance through the Durham MBA.</p>
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Neha Malik</h1>
+    <p class="hero-lede">Software test architect and AI automation leader. For nearly 12 years I have built the frameworks, pipelines and AI tooling that let enterprise teams release with confidence. Ex-Accenture Associate Manager, now on the Durham MBA.</p>
     <div class="hero-actions">
-      <a href="#experience" class="btn-primary">View Experience</a>
-      <a href="#contact" class="btn-secondary">Get in Touch</a>
+      <a class="btn btn-solid" href="#experience">See my experience</a>
+      <a class="btn btn-line" href="#contact">Get in touch</a>
     </div>
-  </div>
-  <div class="hero-card">
-    <p class="hero-card-label">Career at a Glance</p>
-    <div class="metric-row">
-      <div class="metric">
-        <div class="metric-val">~12</div>
-        <div class="metric-lbl">Years of<br>Experience</div>
-      </div>
-      <div class="metric">
-        <div class="metric-val">70%</div>
-        <div class="metric-lbl">Productivity Gain<br>from AI POC</div>
-      </div>
-      <div class="metric">
-        <div class="metric-val">82%</div>
-        <div class="metric-lbl">Test Coverage<br>Achieved</div>
-      </div>
-      <div class="metric">
-        <div class="metric-val">15</div>
-        <div class="metric-lbl">Engineers Led<br>Across 3 Countries</div>
-      </div>
-    </div>
-  </div>
-</div>
-<div style="max-width:1080px;margin:auto;padding:0 2.5rem"><hr class="divider"></div>
 
-<!-- ABOUT -->
-<section class="sec" id="about">
-  <div class="sec-w">
-    <div class="sec-head">
-      <p class="sec-eyebrow">Profile</p>
-      <h2 class="sec-title">About Me</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-body">
-        <p class="about-quote">"Great products don't just ship on time — they ship with quality built in from day one."</p>
-        <p>I'm a technology leader with nearly 12 years in software quality, test automation and AI-driven engineering for global clients in energy, healthcare, insurance and aviation — at Accenture, NTT DATA, HCL Technologies and Sopra Steria.</p>
-        <p>At Accenture I progressed from Senior Test Architect to Test Manager and AI Enablement &amp; Automation Lead (Associate Manager) on a large-scale energy transformation programme for a leading US-based client. I architect automation frameworks, design and review Git-based CI/CD pipelines, partner with business analysts through UAT, and stay with the team through go-live.</p>
-        <p>I enjoy working alongside teams on interesting proofs of concept — most notably an LLM-based automation framework that Accenture went on to adopt across multiple projects. I'm now an MBA candidate at Durham University Business School, adding strategy and finance to my technical depth to lead technology- and AI-enabled transformation.</p>
+    <div class="pipeline" aria-label="Career pipeline from 2014 to today">
+      <div class="pipeline-head">
+        <p class="pipeline-title">Career pipeline</p>
+        <p class="pipeline-status">5 stages passed, 1 running</p>
       </div>
-      <div class="about-right">
-        <div class="highlight-item">
-          <div class="hi-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-          </div>
-          <div>
-            <p class="hi-label">AI POC, Adopted Across Accenture</p>
-            <p class="hi-text">Led an LLM-based proof of concept spanning test case generation to execution. Adopted across multiple Accenture projects — 70% productivity gain, resourcing cut from 10 manual testers to 3 automation testers.</p>
-          </div>
-        </div>
-        <div class="highlight-item">
-          <div class="hi-icon">
-            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <div>
-            <p class="hi-label">Test Coverage Growth</p>
-            <p class="hi-text">Grew test coverage from 65% to 82% using SonarQube, automation and risk-based testing across enterprise energy platforms.</p>
-          </div>
-        </div>
-        <div class="highlight-item">
-          <div class="hi-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <div>
-            <p class="hi-label">Frameworks &amp; CI/CD</p>
-            <p class="hi-text">Architected automation frameworks and designed and reviewed Git-based CI/CD pipelines in Jenkins and Azure DevOps, embedding automated testing into every release.</p>
-          </div>
-        </div>
+      <ol class="stages">
+        <li class="stage">
+          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <div class="stage-year">2014</div>
+          <div class="stage-role">Testing Engineer Analyst</div>
+          <div class="stage-org">NTT DATA</div>
+        </li>
+        <li class="stage">
+          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <div class="stage-year">2018</div>
+          <div class="stage-role">Senior Software Engineer</div>
+          <div class="stage-org">Sopra Steria</div>
+        </li>
+        <li class="stage">
+          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <div class="stage-year">2019</div>
+          <div class="stage-role">Senior Test Analyst</div>
+          <div class="stage-org">NTT DATA</div>
+        </li>
+        <li class="stage">
+          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <div class="stage-year">2021</div>
+          <div class="stage-role">Senior Test Lead</div>
+          <div class="stage-org">HCL Technologies</div>
+        </li>
+        <li class="stage">
+          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <div class="stage-year">2022 to 2026</div>
+          <div class="stage-role">Test Architect to AI Enablement Lead</div>
+          <div class="stage-org">Accenture</div>
+        </li>
+        <li class="stage">
+          <div class="node running" aria-label="In progress"></div>
+          <div class="stage-year">Now</div>
+          <div class="stage-role">MBA candidate and Venture Capitalist</div>
+          <div class="stage-org">Durham University and EduDAG</div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="results">
+  <div class="wrap">
+    <h2>Results that held up in production</h2>
+    <div class="results">
+      <div class="result">
+        <div class="result-figure">70%</div>
+        <p>Productivity gain from an LLM-based automation framework I led, cutting resourcing from 10 manual testers to 3 automation testers.</p>
+        <span class="check">Adopted across Accenture</span>
+      </div>
+      <div class="result">
+        <div class="result-figure">65<small>%</small> to 82<small>%</small></div>
+        <p>Test coverage on enterprise energy platforms, raised through automation, SonarQube quality monitoring and risk-based testing.</p>
+        <span class="check">Digital twin, 12+ facilities</span>
+      </div>
+      <div class="result">
+        <div class="result-figure">15</div>
+        <p>Engineers led across India, the US and Australia, with training I designed on automation frameworks.</p>
+        <span class="check">Accenture ACE Award 2024</span>
       </div>
     </div>
   </div>
 </section>
 
-<hr class="divider">
-
-<!-- SKILLS -->
-<section class="sec sec-alt" id="skills">
-  <div class="sec-w">
-    <div class="sec-head">
-      <p class="sec-eyebrow">Expertise</p>
-      <h2 class="sec-title">Skills &amp; Technologies</h2>
-    </div>
-    <div class="skills-cols">
-      <div class="skill-cell">
-        <p class="sc-label">Automation &amp; Frameworks</p>
-        <div class="sc-tags"><span class="sc-tag">Selenium WebDriver</span><span class="sc-tag">Playwright</span><span class="sc-tag">Python</span><span class="sc-tag">Java</span><span class="sc-tag">Behave</span><span class="sc-tag">Robot Framework</span><span class="sc-tag">TestNG</span><span class="sc-tag">REST Assured</span></div>
-      </div>
-      <div class="skill-cell">
-        <p class="sc-label">AI &amp; Emerging Tech</p>
-        <div class="sc-tags"><span class="sc-tag">Generative AI</span><span class="sc-tag">Large Language Models</span><span class="sc-tag">Prompt Engineering</span><span class="sc-tag">AI-driven Testing</span><span class="sc-tag">Intelligent Test Design</span></div>
-      </div>
-      <div class="skill-cell">
-        <p class="sc-label">CI/CD &amp; DevOps</p>
-        <div class="sc-tags"><span class="sc-tag">Git</span><span class="sc-tag">GitHub</span><span class="sc-tag">Jenkins</span><span class="sc-tag">Azure DevOps</span><span class="sc-tag">Pipeline Reviews</span><span class="sc-tag">Continuous Testing</span></div>
-      </div>
-      <div class="skill-cell">
-        <p class="sc-label">Testing Expertise</p>
-        <div class="sc-tags"><span class="sc-tag">Web &amp; Mobile</span><span class="sc-tag">API Testing</span><span class="sc-tag">Regression</span><span class="sc-tag">Integration</span><span class="sc-tag">Functional</span><span class="sc-tag">UAT</span></div>
-      </div>
-      <div class="skill-cell">
-        <p class="sc-label">Quality &amp; Risk</p>
-        <div class="sc-tags"><span class="sc-tag">Test Architecture</span><span class="sc-tag">Test Strategy</span><span class="sc-tag">Risk-based Testing</span><span class="sc-tag">Defect Analysis</span><span class="sc-tag">Release &amp; Go-live Readiness</span></div>
-      </div>
-      <div class="skill-cell">
-        <p class="sc-label">Tools &amp; Platforms</p>
-        <div class="sc-tags"><span class="sc-tag">JIRA</span><span class="sc-tag">Confluence</span><span class="sc-tag">Postman</span><span class="sc-tag">SonarQube</span><span class="sc-tag">BrowserStack</span><span class="sc-tag">SOAP UI</span></div>
-      </div>
-      <div class="skill-cell">
-        <p class="sc-label">Leadership &amp; Delivery</p>
-        <div class="sc-tags"><span class="sc-tag">Global Team Leadership</span><span class="sc-tag">Agile &amp; Scrum (CSM)</span><span class="sc-tag">Stakeholder Management</span><span class="sc-tag">Release Planning</span><span class="sc-tag">BA &amp; UAT Collaboration</span></div>
-      </div>
-      <div class="skill-cell">
-        <p class="sc-label">Data &amp; Metrics</p>
-        <div class="sc-tags"><span class="sc-tag">Test Coverage KPIs</span><span class="sc-tag">Defect Leakage</span><span class="sc-tag">QA Dashboards</span><span class="sc-tag">Release Quality</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ROLES -->
-<section class="sec" id="domains">
-  <div class="sec-w">
-    <div class="sec-head">
-      <p class="sec-eyebrow">What I Bring to the Table</p>
-      <h2 class="sec-title">Where I Add Value</h2>
-    </div>
-    <div class="domain-grid">
-      <div class="domain-item">
-        <div class="di-num">01</div>
-        <div class="di-name">AI &amp; Automation Leadership</div>
-        <div class="di-sub">Taking AI from proof of concept to adoption — LLM-assisted automation, intelligent test design and responsible rollout across delivery teams.</div>
-      </div>
-      <div class="domain-item">
-        <div class="di-num">02</div>
-        <div class="di-name">Test Architecture</div>
-        <div class="di-sub">Designing scalable automation frameworks, quality strategy and CI/CD integration for complex enterprise and digital twin platforms.</div>
-      </div>
-      <div class="domain-item">
-        <div class="di-num">03</div>
-        <div class="di-name">Delivery &amp; Go-live</div>
-        <div class="di-sub">Leading distributed teams, partnering with BAs through UAT and turning technical risk into clear release recommendations through go-live.</div>
-      </div>
-      <div class="domain-item">
-        <div class="di-num">04</div>
-        <div class="di-name">Technology Transformation</div>
-        <div class="di-sub">Combining deep engineering experience with MBA strategy and finance to shape technology- and AI-enabled business change.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- AI -->
-<section class="sec sec-alt" id="ai">
-  <div class="sec-w">
-    <div class="sec-head">
-      <p class="sec-eyebrow">Forward-Looking Work</p>
-      <h2 class="sec-title">AI &amp; Innovation</h2>
-    </div>
+<section class="section" id="ai">
+  <div class="wrap">
+    <h2>Taking AI from proof of concept to everyday tooling</h2>
+    <p class="section-intro">At Accenture I led a proof of concept that put large language models to work across the whole automation lifecycle, so entry-level engineers could create and run scripts without deep programming knowledge. Teams across multiple projects went on to adopt it.</p>
     <div class="ai-grid">
-      <div class="ai-item">
-        <p class="ai-title">LLM Automation Framework</p>
-        <p class="ai-text">Led an AI proof of concept using large language models across the automation lifecycle — from test case generation to execution — so entry-level engineers could create and run scripts without deep programming knowledge. Later adopted across multiple Accenture projects.</p>
-      </div>
-      <div class="ai-item">
-        <p class="ai-title">Whitepaper</p>
-        <p class="ai-text">Wrote “Rethinking QA: AI-Driven Test Automation in Practice” — how LLMs, predictive defect analysis and self-healing automation address the structural limits of conventional test automation, with findings from digital twin systems in energy.</p>
-        <p style="margin-top:1rem"><a href="whitepaper.html" style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);text-decoration:none">Read the whitepaper →</a></p>
-      </div>
-      <div class="ai-item">
-        <p class="ai-title">Predictive Defect Analysis</p>
-        <p class="ai-text">Exploring AI-driven test optimisation and predictive defect analysis using historical test data to reduce defect leakage before production.</p>
-      </div>
-      <div class="ai-item">
-        <p class="ai-title">Prompt Engineering &amp; POCs</p>
-        <p class="ai-text">Applying prompt engineering to test design and scenario coverage, and working alongside teams on further AI proofs of concept for intelligent, AI-assisted quality engineering.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- EXPERIENCE -->
-<section class="sec" id="experience">
-  <div class="sec-w">
-    <div class="sec-head">
-      <p class="sec-eyebrow">Career History</p>
-      <h2 class="sec-title">Work Experience</h2>
-    </div>
-    <div class="tl">
-
-      <div class="tl-item">
-        <div class="tl-left">
-          <p class="tl-date">Jul 2026 — Present</p>
-          <p class="tl-co">EduDAG</p>
+      <ol class="flow" aria-label="Where AI fits in my automation lifecycle">
+        <li><h3>Start from the requirement</h3><p>User stories and requirements are the starting point for test design.</p></li>
+        <li><h3>Generate test cases with an LLM</h3><p>The model drafts test cases, including edge cases that are easy to miss by hand.</p></li>
+        <li><h3>Execute them as automation</h3><p>Generated cases run as automated scripts, so less experienced engineers can contribute without deep coding.</p></li>
+        <li><h3>Run in the pipeline</h3><p>Automated suites run in Jenkins and Azure DevOps CI/CD pipelines, versioned in Git.</p></li>
+        <li><h3>Report and improve</h3><p>QA dashboards track coverage, defects and release readiness.</p></li>
+      </ol>
+      <div class="ai-side">
+        <div class="panel panel-feature">
+          <h3>Rethinking QA: AI-Driven Test Automation in Practice</h3>
+          <p>My whitepaper on why conventional automation hits structural limits, and how LLMs, predictive defect analysis and self-healing automation address them, with findings from digital twin systems in energy.</p>
+          <a href="whitepaper.html">Read the whitepaper</a>
         </div>
-        <div class="tl-right">
-          <p class="tl-role">Venture Capitalist</p>
-          <span class="tl-tag">Current Role</span>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-left">
-          <p class="tl-date">Jan 2022 — Oct 2026</p>
-          <p class="tl-co">Accenture</p>
-        </div>
-        <div class="tl-right">
-          <p class="tl-role">AI Enablement &amp; Automation Lead · Test Manager · Senior Test Architect</p>
-          <p class="tl-sub">Associate Manager &nbsp;·&nbsp; Energy transformation programme for a leading US-based client</p>
-          <ul class="tl-bullets">
-            <li><strong>AI &amp; Generative AI:</strong> Led an LLM-based proof of concept across the automation lifecycle, from test case generation to execution; adopted across multiple Accenture projects, increasing productivity by 70% and reducing resourcing from 10 manual testers to 3 automation testers</li>
-            <li><strong>Frameworks:</strong> Architected scalable automation frameworks with Selenium, Playwright and Python (Behave), and owned automation strategy and script reviews for consistent, maintainable suites</li>
-            <li><strong>CI/CD:</strong> Designed and reviewed Git-based CI/CD pipelines in Jenkins and Azure DevOps, embedding automated testing into every release</li>
-            <li><strong>Digital twin:</strong> Led quality engineering for digital twin delivery across 12+ facilities, aligning product, engineering and business stakeholders</li>
-            <li><strong>Quality at scale:</strong> Grew test coverage from 65% to 82% using SonarQube, quality monitoring and risk-based testing; built QA dashboards for defect coverage and release readiness</li>
-            <li><strong>UAT &amp; go-live:</strong> Partnered with business analysts through UAT and was part of go-live, translating technical risk into clear release recommendations</li>
-            <li><strong>Leadership:</strong> Managed a distributed team of 15 across India, the US and Australia and delivered automation framework training; recognised with an Accenture ACE Award (2024)</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-left">
-          <p class="tl-date">Oct 2021 — Jan 2022</p>
-          <p class="tl-co">HCL Technologies</p>
-        </div>
-        <div class="tl-right">
-          <p class="tl-role">Senior Test Lead</p>
-          <ul class="tl-bullets">
-            <li>Directed QA efforts for enterprise applications, enhancing operational efficiency and meeting business needs</li>
-            <li>Developed comprehensive risk-based testing strategies to improve system reliability and user experience</li>
-            <li>Coordinated with stakeholders to deliver high-quality outcomes aligned with product vision</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-left">
-          <p class="tl-date">Sep 2019 — Oct 2021</p>
-          <p class="tl-co">NTT DATA</p>
-        </div>
-        <div class="tl-right">
-          <p class="tl-role">Senior Test Analyst</p>
-          <ul class="tl-bullets">
-            <li>Built a custom test automation framework from scratch using Selenium and Java, and led automation initiatives with Robot Framework and Python</li>
-            <li>Led automation coverage that reduced manual regression effort by over 50% within two quarters</li>
-            <li>Supported QA for healthcare and insurance applications, focusing on policy management and financial workflows</li>
-            <li>Drove product launches through precise effort estimates, risk analysis and full requirements-to-test traceability</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-left">
-          <p class="tl-date">May 2018 — Sep 2019</p>
-          <p class="tl-co">Sopra Steria</p>
-        </div>
-        <div class="tl-right">
-          <p class="tl-role">Senior Software Engineer</p>
-          <ul class="tl-bullets">
-            <li>Led web, mobile and API testing for easyJet's booking and operational systems</li>
-            <li>Validated end-to-end customer journeys including booking, payment and flight management workflows</li>
-            <li>Contributed to regulatory initiatives including GDPR compliance and user privacy validation</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-left">
-          <p class="tl-date">Dec 2014 — May 2018</p>
-          <p class="tl-co">NTT DATA (formerly Dell Services)</p>
-        </div>
-        <div class="tl-right">
-          <p class="tl-role">Testing Engineer Analyst</p>
-          <ul class="tl-bullets">
-            <li>Tested healthcare applications handling patient data and operational workflows in high-compliance environments</li>
-            <li>Contributed to modernisation of legacy systems into web-based applications, ensuring functional consistency</li>
-            <li>Performed root cause analysis and UAT support, ensuring alignment with business expectations</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- EDUCATION & CERTIFICATIONS -->
-    <div class="edu-grid">
-      <div class="edu-card">
-        <p class="edu-label">Education</p>
-        <p class="edu-deg">Master of Business Administration (MBA)</p>
-        <p class="edu-meta">Durham University Business School &nbsp;·&nbsp; 2026 – 2027<br>Member, Consulting Club</p>
-      </div>
-      <div class="edu-card">
-        <p class="edu-label">Education</p>
-        <p class="edu-deg">B.Tech — Information Technology</p>
-        <p class="edu-meta">Amity University, Gurgaon &nbsp;·&nbsp; 2014<br>Distinction (CGPA 7.13/10)</p>
-      </div>
-      <div class="edu-card">
-        <p class="edu-label">Certifications</p>
-        <div class="sc-tags" style="margin-top:.6rem"><span class="sc-tag">ISTQB Foundation Level</span><span class="sc-tag">Certified ScrumMaster (CSM)</span><span class="sc-tag">Accenture Generative AI</span><span class="sc-tag">Accenture TQ</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- CONTACT -->
-<section class="sec" id="contact">
-  <div class="sec-w">
-    <div class="contact-grid">
-      <div>
-        <p class="sec-eyebrow">Let's Connect</p>
-        <p class="contact-lead">Open to AI, automation and technology transformation roles.</p>
-        <p class="contact-sub">With nearly 12 years architecting automation, leading distributed teams and taking AI from proof of concept to adoption, I bring both technical depth and a strategic mindset. If you're building something where quality, AI and delivery matter — let's talk.</p>
-      </div>
-      <div class="contact-links">
-        <a class="cl" href="mailto:neha.malik028@gmail.com">
-          <div class="cl-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
-          <div><p class="cl-label">Email</p><p class="cl-val">neha.malik028@gmail.com</p></div>
-        </a>
-        <a class="cl" href="https://www.linkedin.com/in/nehamalik-accenture/" target="_blank">
-          <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-          <div><p class="cl-label">LinkedIn</p><p class="cl-val">linkedin.com/in/nehamalik-accenture</p></div>
-        </a>
-        <a class="cl" href="tel:+447351945115">
-          <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
-          <div><p class="cl-label">Phone</p><p class="cl-val">+44 7351 945115</p></div>
-        </a>
-        <div class="cl" style="cursor:default">
-          <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><p class="cl-label">Location</p><p class="cl-val">Durham, United Kingdom</p></div>
+        <div class="panel">
+          <h3>Further proofs of concept</h3>
+          <p>I work alongside teams on new AI experiments, including predictive defect analysis on historical test data and prompt engineering for better scenario coverage.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Neha Malik &nbsp;·&nbsp; AI &amp; Quality Engineering Leader &nbsp;·&nbsp; Durham, UK</footer>
+<section class="section section-alt" id="capabilities">
+  <div class="wrap">
+    <h2>How I work with engineering and business teams</h2>
+    <div class="caps">
+      <div class="cap">
+        <h3>Architect the automation</h3>
+        <p>I design frameworks that stay maintainable as products grow, set the automation strategy and review scripts for consistency.</p>
+        <p class="tools">Selenium WebDriver, Playwright, Python, Java, Behave, Robot Framework, TestNG, REST Assured</p>
+      </div>
+      <div class="cap">
+        <h3>Build and review the pipelines</h3>
+        <p>I design and review Git-based CI/CD pipelines so automated testing runs on every change, not just before a release.</p>
+        <p class="tools">Git, GitHub, Jenkins, Azure DevOps, SonarQube</p>
+      </div>
+      <div class="cap">
+        <h3>See it through UAT and go-live</h3>
+        <p>I partner with business analysts through user acceptance testing and stay with the team through go-live, turning technical risk into clear release recommendations.</p>
+        <p class="tools">UAT, release readiness, risk-based testing, defect analysis</p>
+      </div>
+      <div class="cap">
+        <h3>Lead distributed teams</h3>
+        <p>I have managed engineers across three countries in Agile Scrum teams, coached them on frameworks and aligned product, engineering and business stakeholders.</p>
+        <p class="tools">Certified ScrumMaster, stakeholder management, JIRA, Confluence</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <ol class="jobs">
+      <li class="job">
+        <div><div class="job-when">Jul 2026 to present</div><div class="job-org">EduDAG</div></div>
+        <div>
+          <p class="job-title">Venture Capitalist <span class="job-now">Current</span></p>
+          <p class="job-about">EduDAG is an MBA and Master's admissions consultancy guiding students in India and abroad, from shortlisting and test preparation to applications, interviews, visas and scholarships.</p>
+        </div>
+      </li>
+      <li class="job">
+        <div><div class="job-when">Jan 2022 to Oct 2026</div><div class="job-org">Accenture</div></div>
+        <div>
+          <p class="job-title">AI Enablement and Automation Lead, Test Manager, Senior Test Architect</p>
+          <p class="job-sub">Associate Manager on an energy transformation programme for a leading US-based client</p>
+          <ul>
+            <li><b>AI:</b> Led an LLM-based proof of concept from test case generation to execution, adopted across multiple Accenture projects, with a 70% productivity gain and resourcing cut from 10 manual testers to 3 automation testers.</li>
+            <li><b>Frameworks:</b> Architected scalable automation with Selenium, Playwright and Python (Behave), and owned automation strategy and script reviews.</li>
+            <li><b>CI/CD:</b> Designed and reviewed Git-based pipelines in Jenkins and Azure DevOps, embedding automated testing into every release.</li>
+            <li><b>Digital twin:</b> Led quality engineering for digital twin delivery across 12+ facilities.</li>
+            <li><b>Quality:</b> Grew test coverage from 65% to 82% with SonarQube and risk-based testing, and built QA dashboards for release readiness.</li>
+            <li><b>UAT and go-live:</b> Partnered with business analysts through UAT and was part of go-live.</li>
+            <li><b>Leadership:</b> Managed a team of 15 across India, the US and Australia; Accenture ACE Award 2024.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div><div class="job-when">Oct 2021 to Jan 2022</div><div class="job-org">HCL Technologies</div></div>
+        <div>
+          <p class="job-title">Senior Test Lead</p>
+          <ul>
+            <li>Directed QA for enterprise applications, balancing product requirements, operational needs and business priorities.</li>
+            <li>Developed risk-based testing strategies and communicated delivery risks to stakeholders.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div><div class="job-when">Sep 2019 to Oct 2021</div><div class="job-org">NTT DATA</div></div>
+        <div>
+          <p class="job-title">Senior Test Analyst</p>
+          <ul>
+            <li>Built a custom test automation framework from scratch in Selenium and Java, and led automation with Robot Framework and Python.</li>
+            <li>Led automation coverage that cut manual regression effort by over 50% within two quarters.</li>
+            <li>Led QA for healthcare and insurance applications, with full requirements-to-test traceability.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div><div class="job-when">May 2018 to Sep 2019</div><div class="job-org">Sopra Steria</div></div>
+        <div>
+          <p class="job-title">Senior Software Engineer</p>
+          <ul>
+            <li>Led web, mobile and API testing for easyJet's booking, payment and flight management journeys.</li>
+            <li>Contributed to GDPR compliance and user privacy validation.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div><div class="job-when">Dec 2014 to May 2018</div><div class="job-org">NTT DATA</div></div>
+        <div>
+          <p class="job-title">Testing Engineer Analyst</p>
+          <p class="job-sub">Joined Dell Services, which became part of NTT DATA</p>
+          <ul>
+            <li>Tested healthcare applications in high-compliance environments and supported legacy modernisation to web applications.</li>
+            <li>Performed root cause analysis and UAT support.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt" id="skills">
+  <div class="wrap">
+    <h2>Tools and skills</h2>
+    <div class="skills">
+      <div><h3>AI</h3><ul><li>Generative AI</li><li>Large language models</li><li>Prompt engineering</li><li>AI-driven testing</li></ul></div>
+      <div><h3>Automation</h3><ul><li>Selenium WebDriver</li><li>Playwright</li><li>Python and Java</li><li>Behave, Robot Framework, TestNG</li><li>REST Assured, Postman</li></ul></div>
+      <div><h3>DevOps</h3><ul><li>Git and GitHub</li><li>Jenkins</li><li>Azure DevOps</li><li>SonarQube</li><li>BrowserStack</li></ul></div>
+      <div><h3>Delivery</h3><ul><li>Test architecture and strategy</li><li>UAT and go-live readiness</li><li>Agile Scrum</li><li>JIRA and Confluence</li></ul></div>
+    </div>
+    <div class="edu">
+      <div class="panel">
+        <h3>MBA, Durham University Business School</h3>
+        <p>2026 to 2027</p>
+        <ul><li>Strategy, finance, operations and technology</li><li>Member, Consulting Club</li></ul>
+      </div>
+      <div class="panel">
+        <h3>B.Tech, Information Technology</h3>
+        <p>Amity University, Gurgaon, 2014</p>
+        <ul><li>Distinction, CGPA 7.13/10</li></ul>
+      </div>
+      <div class="panel">
+        <h3>Certifications</h3>
+        <ul><li>ISTQB Certified Tester, Foundation Level</li><li>Certified ScrumMaster (CSM)</li><li>Accenture Generative AI</li><li>Accenture Technology Quotient</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Building something where quality and AI both matter? Let's talk.</h2>
+    <p>I'm open to AI, test automation and technology transformation roles.</p>
+    <ul class="contact-list">
+      <li><span>Email</span><a href="mailto:neha.malik028@gmail.com">neha.malik028@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/nehamalik-accenture/" target="_blank" rel="noopener">nehamalik-accenture</a></li>
+      <li><span>Phone</span><a href="tel:+447351945115">+44 7351 945115</a></li>
+      <li><span>Based in</span><strong>Durham, United Kingdom</strong></li>
+    </ul>
+  </div>
+</section>
+<footer><div class="wrap">© 2026 Neha Malik</div></footer>
 
 </body>
 </html>
