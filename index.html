@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Neha Malik – QA Engineering Leader</title>
+<title>Neha Malik – AI-Driven Test Automation &amp; Quality Engineering Leader</title>
+<meta name="description" content="Neha Malik – Software Test Architect and AI automation leader with nearly 12 years in enterprise quality engineering. Ex-Accenture Associate Manager, Durham MBA 2027."/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -29,6 +30,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 .nav-links{display:flex;gap:2.2rem;list-style:none}
 .nav-links a{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--ink)}
+@media(max-width:780px){.nav-links{gap:1rem}.nav-links li:nth-child(3){display:none}}
 
 /* ── HERO ── */
 .hero{padding:140px 2.5rem 100px;max-width:1080px;margin:auto;display:grid;grid-template-columns:1fr 340px;gap:5rem;align-items:center}
@@ -105,10 +107,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 .tl-co{font-size:.78rem;font-weight:600;color:var(--gold);letter-spacing:.04em}
 .tl-right{}
 .tl-role{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:.15rem}
+.tl-sub{font-size:.78rem;color:var(--faint);margin-bottom:.7rem;letter-spacing:.02em}
 .tl-tag{display:inline-block;font-size:.63rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-lt);padding:.15rem .55rem;margin-bottom:.9rem}
 .tl-bullets{list-style:none;padding:0}
 .tl-bullets li{font-size:.82rem;color:var(--muted);padding:.2rem 0 .2rem 1.1rem;position:relative;line-height:1.7}
 .tl-bullets li::before{content:'';position:absolute;left:0;top:.62rem;width:5px;height:1px;background:var(--gold)}
+.tl-bullets li strong{color:var(--ink2);font-weight:600}
+
+/* ── EDUCATION ── */
+.edu-grid{margin-top:3.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.edu-card{padding:2rem;border:1px solid var(--line)}
+.edu-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.4rem}
+.edu-deg{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--ink)}
+.edu-meta{font-size:.8rem;color:var(--muted);margin-top:.2rem;line-height:1.6}
 
 /* ── CONTACT ── */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
@@ -135,7 +146,7 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#domains">Domains</a></li>
+      <li><a href="#domains">Roles</a></li>
       <li><a href="#ai">AI Work</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -147,9 +158,9 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
 <div style="max-width:1080px;margin:auto;padding:0 2.5rem"><hr class="divider" style="margin-top:56px"></div>
 <div style="max-width:1080px;margin:auto" class="hero">
   <div>
-    <p class="hero-eyebrow">QA Leadership &nbsp;·&nbsp; Project Management &nbsp;·&nbsp; AI &amp; Innovation</p>
+    <p class="hero-eyebrow">AI-Driven Test Automation &nbsp;·&nbsp; Quality Engineering &nbsp;·&nbsp; Durham MBA ’27</p>
     <h1>Neha<br>Malik</h1>
-    <p class="hero-sub">Senior QA leader and emerging project manager with 11+ years of experience driving enterprise quality, cross-functional delivery, and AI-powered innovation — ready to lead programs at the intersection of quality, technology, and intelligent systems.</p>
+    <p class="hero-sub">Software test architect and AI automation leader with nearly 12 years of enterprise quality engineering. Ex-Accenture Associate Manager who builds automation frameworks, reviews CI/CD pipelines and turns AI proofs of concept into tools teams actually adopt — now adding strategy and finance through the Durham MBA.</p>
     <div class="hero-actions">
       <a href="#experience" class="btn-primary">View Experience</a>
       <a href="#contact" class="btn-secondary">Get in Touch</a>
@@ -159,20 +170,20 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
     <p class="hero-card-label">Career at a Glance</p>
     <div class="metric-row">
       <div class="metric">
-        <div class="metric-val">11+</div>
+        <div class="metric-val">~12</div>
         <div class="metric-lbl">Years of<br>Experience</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">70%</div>
+        <div class="metric-lbl">Productivity Gain<br>from AI POC</div>
       </div>
       <div class="metric">
         <div class="metric-val">82%</div>
         <div class="metric-lbl">Test Coverage<br>Achieved</div>
       </div>
       <div class="metric">
-        <div class="metric-val">4</div>
-        <div class="metric-lbl">Industry<br>Domains</div>
-      </div>
-      <div class="metric">
-        <div class="metric-val">5</div>
-        <div class="metric-lbl">Companies<br>Served</div>
+        <div class="metric-val">15</div>
+        <div class="metric-lbl">Engineers Led<br>Across 3 Countries</div>
       </div>
     </div>
   </div>
@@ -188,28 +199,28 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
     </div>
     <div class="about-grid">
       <div class="about-body">
-        <p class="about-quote">"Great projects don't just ship on time — they ship with quality built in from day one."</p>
-        <p>Senior QA leader with 11+ years of experience managing enterprise programs across energy, healthcare, insurance, and airline domains. Proven ability to lead cross-functional teams, manage delivery timelines, align stakeholders, and drive risk-based decision-making at scale.</p>
-        <p>Experienced in end-to-end program ownership — from requirement analysis and backlog refinement to release planning and post-delivery quality governance. Comfortable owning both the strategic roadmap and the hands-on execution across complex, multi-team environments.</p>
-        <p>Actively pursuing project and program management opportunities in QA, technology delivery, and AI-driven initiatives — bringing deep technical expertise, leadership experience, and a product-first mindset to every engagement.</p>
+        <p class="about-quote">"Great products don't just ship on time — they ship with quality built in from day one."</p>
+        <p>I'm a technology leader with nearly 12 years in software quality, test automation and AI-driven engineering for global clients in energy, healthcare, insurance and aviation — at Accenture, NTT DATA, HCL Technologies and Sopra Steria.</p>
+        <p>At Accenture I progressed from Senior Test Architect to Test Manager and AI Enablement &amp; Automation Lead (Associate Manager) on a large-scale energy transformation programme for a leading US-based client. I architect automation frameworks, design and review Git-based CI/CD pipelines, partner with business analysts through UAT, and stay with the team through go-live.</p>
+        <p>I enjoy working alongside teams on interesting proofs of concept — most notably an LLM-based automation framework that Accenture went on to adopt across multiple projects. I'm now an MBA candidate at Durham University Business School, adding strategy and finance to my technical depth to lead technology- and AI-enabled transformation.</p>
       </div>
       <div class="about-right">
+        <div class="highlight-item">
+          <div class="hi-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <div>
+            <p class="hi-label">AI POC, Adopted Across Accenture</p>
+            <p class="hi-text">Led an LLM-based proof of concept spanning test case generation to execution. Adopted across multiple Accenture projects — 70% productivity gain, resourcing cut from 10 manual testers to 3 automation testers.</p>
+          </div>
+        </div>
         <div class="highlight-item">
           <div class="hi-icon">
             <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div>
             <p class="hi-label">Test Coverage Growth</p>
-            <p class="hi-text">Grew test coverage from 65% to 82% using SonarQube at Accenture — a measurable improvement in product quality metrics across enterprise energy platforms.</p>
-          </div>
-        </div>
-        <div class="highlight-item">
-          <div class="hi-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-          </div>
-          <div>
-            <p class="hi-label">Generative AI POC Lead</p>
-            <p class="hi-text">Led an LLM-based proof of concept for automated test case generation from user stories — demonstrating the future of AI-assisted quality engineering.</p>
+            <p class="hi-text">Grew test coverage from 65% to 82% using SonarQube, automation and risk-based testing across enterprise energy platforms.</p>
           </div>
         </div>
         <div class="highlight-item">
@@ -217,8 +228,8 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <div>
-            <p class="hi-label">CI/CD Integration</p>
-            <p class="hi-text">Optimized CI/CD pipelines by embedding automated testing, accelerating release cycles and improving overall deployment reliability across teams.</p>
+            <p class="hi-label">Frameworks &amp; CI/CD</p>
+            <p class="hi-text">Architected automation frameworks and designed and reviewed Git-based CI/CD pipelines in Jenkins and Azure DevOps, embedding automated testing into every release.</p>
           </div>
         </div>
       </div>
@@ -237,32 +248,32 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
     </div>
     <div class="skills-cols">
       <div class="skill-cell">
-        <p class="sc-label">Programming &amp; Automation</p>
-        <div class="sc-tags"><span class="sc-tag">Python</span><span class="sc-tag">Behave</span><span class="sc-tag">Robot Framework</span></div>
+        <p class="sc-label">Automation &amp; Frameworks</p>
+        <div class="sc-tags"><span class="sc-tag">Selenium WebDriver</span><span class="sc-tag">Playwright</span><span class="sc-tag">Python</span><span class="sc-tag">Java</span><span class="sc-tag">Behave</span><span class="sc-tag">Robot Framework</span><span class="sc-tag">TestNG</span><span class="sc-tag">REST Assured</span></div>
       </div>
       <div class="skill-cell">
         <p class="sc-label">AI &amp; Emerging Tech</p>
-        <div class="sc-tags"><span class="sc-tag">LLM Fundamentals</span><span class="sc-tag">Prompt Engineering</span><span class="sc-tag">AI-driven Testing</span><span class="sc-tag">Intelligent Test Design</span></div>
+        <div class="sc-tags"><span class="sc-tag">Generative AI</span><span class="sc-tag">Large Language Models</span><span class="sc-tag">Prompt Engineering</span><span class="sc-tag">AI-driven Testing</span><span class="sc-tag">Intelligent Test Design</span></div>
       </div>
       <div class="skill-cell">
         <p class="sc-label">CI/CD &amp; DevOps</p>
-        <div class="sc-tags"><span class="sc-tag">Jenkins</span><span class="sc-tag">GitHub</span><span class="sc-tag">Azure DevOps</span><span class="sc-tag">Continuous Testing</span></div>
+        <div class="sc-tags"><span class="sc-tag">Git</span><span class="sc-tag">GitHub</span><span class="sc-tag">Jenkins</span><span class="sc-tag">Azure DevOps</span><span class="sc-tag">Pipeline Reviews</span><span class="sc-tag">Continuous Testing</span></div>
       </div>
       <div class="skill-cell">
         <p class="sc-label">Testing Expertise</p>
-        <div class="sc-tags"><span class="sc-tag">Web &amp; Mobile</span><span class="sc-tag">API Testing</span><span class="sc-tag">Regression</span><span class="sc-tag">Integration</span><span class="sc-tag">Functional</span></div>
+        <div class="sc-tags"><span class="sc-tag">Web &amp; Mobile</span><span class="sc-tag">API Testing</span><span class="sc-tag">Regression</span><span class="sc-tag">Integration</span><span class="sc-tag">Functional</span><span class="sc-tag">UAT</span></div>
       </div>
       <div class="skill-cell">
         <p class="sc-label">Quality &amp; Risk</p>
-        <div class="sc-tags"><span class="sc-tag">Test Strategy</span><span class="sc-tag">Risk-based Testing</span><span class="sc-tag">Defect Analysis</span><span class="sc-tag">Release Readiness</span></div>
+        <div class="sc-tags"><span class="sc-tag">Test Architecture</span><span class="sc-tag">Test Strategy</span><span class="sc-tag">Risk-based Testing</span><span class="sc-tag">Defect Analysis</span><span class="sc-tag">Release &amp; Go-live Readiness</span></div>
       </div>
       <div class="skill-cell">
         <p class="sc-label">Tools &amp; Platforms</p>
         <div class="sc-tags"><span class="sc-tag">JIRA</span><span class="sc-tag">Confluence</span><span class="sc-tag">Postman</span><span class="sc-tag">SonarQube</span><span class="sc-tag">BrowserStack</span><span class="sc-tag">SOAP UI</span></div>
       </div>
       <div class="skill-cell">
-        <p class="sc-label">Product &amp; Delivery</p>
-        <div class="sc-tags"><span class="sc-tag">Requirement Analysis</span><span class="sc-tag">Backlog Refinement</span><span class="sc-tag">Release Planning</span><span class="sc-tag">Stakeholder Collaboration</span></div>
+        <p class="sc-label">Leadership &amp; Delivery</p>
+        <div class="sc-tags"><span class="sc-tag">Global Team Leadership</span><span class="sc-tag">Agile &amp; Scrum (CSM)</span><span class="sc-tag">Stakeholder Management</span><span class="sc-tag">Release Planning</span><span class="sc-tag">BA &amp; UAT Collaboration</span></div>
       </div>
       <div class="skill-cell">
         <p class="sc-label">Data &amp; Metrics</p>
@@ -274,33 +285,33 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
 
 <hr class="divider">
 
-<!-- DOMAINS -->
+<!-- ROLES -->
 <section class="sec" id="domains">
   <div class="sec-w">
     <div class="sec-head">
       <p class="sec-eyebrow">What I Bring to the Table</p>
-      <h2 class="sec-title">Open to These Roles</h2>
+      <h2 class="sec-title">Where I Add Value</h2>
     </div>
     <div class="domain-grid">
       <div class="domain-item">
         <div class="di-num">01</div>
-        <div class="di-name">QA Project Manager</div>
-        <div class="di-sub">Leading quality programs end-to-end — planning, resourcing, stakeholder alignment, risk management, and delivery governance across enterprise systems.</div>
+        <div class="di-name">AI &amp; Automation Leadership</div>
+        <div class="di-sub">Taking AI from proof of concept to adoption — LLM-assisted automation, intelligent test design and responsible rollout across delivery teams.</div>
       </div>
       <div class="domain-item">
         <div class="di-num">02</div>
-        <div class="di-name">Program / Delivery Manager</div>
-        <div class="di-sub">Owning cross-functional delivery roadmaps, managing dependencies across engineering and product teams, and ensuring on-time, high-quality releases.</div>
+        <div class="di-name">Test Architecture</div>
+        <div class="di-sub">Designing scalable automation frameworks, quality strategy and CI/CD integration for complex enterprise and digital twin platforms.</div>
       </div>
       <div class="domain-item">
         <div class="di-num">03</div>
-        <div class="di-name">AI Project Manager</div>
-        <div class="di-sub">Managing AI/ML product delivery — bridging technical and business teams, overseeing LLM-based initiatives, and driving responsible AI adoption within organizations.</div>
+        <div class="di-name">Delivery &amp; Go-live</div>
+        <div class="di-sub">Leading distributed teams, partnering with BAs through UAT and turning technical risk into clear release recommendations through go-live.</div>
       </div>
       <div class="domain-item">
         <div class="di-num">04</div>
-        <div class="di-name">QA Engineering Lead</div>
-        <div class="di-sub">Leading QA strategy, automation frameworks, and team capability building — setting quality standards and embedding testing into the full product development lifecycle.</div>
+        <div class="di-name">Technology Transformation</div>
+        <div class="di-sub">Combining deep engineering experience with MBA strategy and finance to shape technology- and AI-enabled business change.</div>
       </div>
     </div>
   </div>
@@ -317,20 +328,21 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
     </div>
     <div class="ai-grid">
       <div class="ai-item">
-        <p class="ai-title">Generative AI POC</p>
-        <p class="ai-text">Led an LLM-based proof of concept for automated test case generation from user stories and requirements — focusing on efficiency and edge case identification.</p>
+        <p class="ai-title">LLM Automation Framework</p>
+        <p class="ai-text">Led an AI proof of concept using large language models across the automation lifecycle — from test case generation to execution — so entry-level engineers could create and run scripts without deep programming knowledge. Later adopted across multiple Accenture projects.</p>
+      </div>
+      <div class="ai-item">
+        <p class="ai-title">Whitepaper</p>
+        <p class="ai-text">Wrote “Rethinking QA: AI-Driven Test Automation in Practice” — how LLMs, predictive defect analysis and self-healing automation address the structural limits of conventional test automation, with findings from digital twin systems in energy.</p>
+        <p style="margin-top:1rem"><a href="whitepaper.html" style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);text-decoration:none">Read the whitepaper →</a></p>
       </div>
       <div class="ai-item">
         <p class="ai-title">Predictive Defect Analysis</p>
-        <p class="ai-text">Exploring AI-driven test optimization and predictive defect analysis using historical test data to proactively reduce defect leakage before production.</p>
+        <p class="ai-text">Exploring AI-driven test optimisation and predictive defect analysis using historical test data to reduce defect leakage before production.</p>
       </div>
       <div class="ai-item">
-        <p class="ai-title">Prompt Engineering</p>
-        <p class="ai-text">Applying prompt engineering techniques to improve test design efficiency and scenario coverage — accelerating the test creation lifecycle significantly.</p>
-      </div>
-      <div class="ai-item">
-        <p class="ai-title">Intelligent QA Practices</p>
-        <p class="ai-text">Driving a team-wide transition from traditional automation to intelligent, AI-assisted quality engineering practices for next-generation products.</p>
+        <p class="ai-title">Prompt Engineering &amp; POCs</p>
+        <p class="ai-text">Applying prompt engineering to test design and scenario coverage, and working alongside teams on further AI proofs of concept for intelligent, AI-assisted quality engineering.</p>
       </div>
     </div>
   </div>
@@ -349,20 +361,31 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
 
       <div class="tl-item">
         <div class="tl-left">
-          <p class="tl-date">Jan 2022 — Present</p>
+          <p class="tl-date">Jul 2026 — Present</p>
+          <p class="tl-co">EduDAG</p>
+        </div>
+        <div class="tl-right">
+          <p class="tl-role">Venture Capitalist</p>
+          <span class="tl-tag">Current Role</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <p class="tl-date">Jan 2022 — Oct 2026</p>
           <p class="tl-co">Accenture</p>
         </div>
         <div class="tl-right">
-          <p class="tl-role">Quality Engineering Associate Manager</p>
-          <span class="tl-tag">Current Role</span>
+          <p class="tl-role">AI Enablement &amp; Automation Lead · Test Manager · Senior Test Architect</p>
+          <p class="tl-sub">Associate Manager &nbsp;·&nbsp; Energy transformation programme for a leading US-based client</p>
           <ul class="tl-bullets">
-            <li>Developed and executed end-to-end quality strategy for enterprise energy platforms, focusing on Digital Twin systems for asset simulation</li>
-            <li>Designed scalable automation frameworks in Python with Behave to optimize regression and system validation workflows</li>
-            <li>Optimized CI/CD pipelines to incorporate automated testing, accelerating reliable product release cycles</li>
-            <li>Grew test coverage from 65% to 82% using SonarQube, meaningfully improving product quality metrics</li>
-            <li>Built QA dashboards delivering detailed insights into defect coverage and release readiness</li>
-            <li>Led a Generative AI (LLM-based) POC to streamline test case generation from requirements</li>
-            <li>Delivered automation framework training to QA teams, increasing adoption and productivity</li>
+            <li><strong>AI &amp; Generative AI:</strong> Led an LLM-based proof of concept across the automation lifecycle, from test case generation to execution; adopted across multiple Accenture projects, increasing productivity by 70% and reducing resourcing from 10 manual testers to 3 automation testers</li>
+            <li><strong>Frameworks:</strong> Architected scalable automation frameworks with Selenium, Playwright and Python (Behave), and owned automation strategy and script reviews for consistent, maintainable suites</li>
+            <li><strong>CI/CD:</strong> Designed and reviewed Git-based CI/CD pipelines in Jenkins and Azure DevOps, embedding automated testing into every release</li>
+            <li><strong>Digital twin:</strong> Led quality engineering for digital twin delivery across 12+ facilities, aligning product, engineering and business stakeholders</li>
+            <li><strong>Quality at scale:</strong> Grew test coverage from 65% to 82% using SonarQube, quality monitoring and risk-based testing; built QA dashboards for defect coverage and release readiness</li>
+            <li><strong>UAT &amp; go-live:</strong> Partnered with business analysts through UAT and was part of go-live, translating technical risk into clear release recommendations</li>
+            <li><strong>Leadership:</strong> Managed a distributed team of 15 across India, the US and Australia and delivered automation framework training; recognised with an Accenture ACE Award (2024)</li>
           </ul>
         </div>
       </div>
@@ -390,10 +413,10 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
         <div class="tl-right">
           <p class="tl-role">Senior Test Analyst</p>
           <ul class="tl-bullets">
-            <li>Supported QA for healthcare and insurance domain applications, focusing on policy management and financial workflow efficiency</li>
-            <li>Led automation framework initiatives using Robot Framework and Python to enhance business workflow validation</li>
-            <li>Drove successful product launches through precise effort estimates and detailed risk analyses</li>
-            <li>Maintained full traceability between requirements and test coverage for core business functionalities</li>
+            <li>Built a custom test automation framework from scratch using Selenium and Java, and led automation initiatives with Robot Framework and Python</li>
+            <li>Led automation coverage that reduced manual regression effort by over 50% within two quarters</li>
+            <li>Supported QA for healthcare and insurance applications, focusing on policy management and financial workflows</li>
+            <li>Drove product launches through precise effort estimates, risk analysis and full requirements-to-test traceability</li>
           </ul>
         </div>
       </div>
@@ -406,9 +429,9 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
         <div class="tl-right">
           <p class="tl-role">Senior Software Engineer</p>
           <ul class="tl-bullets">
-            <li>Executed detailed web, mobile, and API tests for EasyJet's booking and operational systems</li>
-            <li>Validated end-to-end customer journeys including booking, payment, and flight management workflows</li>
-            <li>Performed integration testing across multiple systems to ensure seamless user experience</li>
+            <li>Led web, mobile and API testing for easyJet's booking and operational systems</li>
+            <li>Validated end-to-end customer journeys including booking, payment and flight management workflows</li>
+            <li>Contributed to regulatory initiatives including GDPR compliance and user privacy validation</li>
           </ul>
         </div>
       </div>
@@ -416,26 +439,35 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
       <div class="tl-item">
         <div class="tl-left">
           <p class="tl-date">Dec 2014 — May 2018</p>
-          <p class="tl-co">NTT DATA</p>
+          <p class="tl-co">NTT DATA (formerly Dell Services)</p>
         </div>
         <div class="tl-right">
           <p class="tl-role">Testing Engineer Analyst</p>
           <ul class="tl-bullets">
-            <li>Tested Healthcare domain applications handling patient data and operational workflows</li>
-            <li>Contributed to modernization of legacy systems into web-based applications ensuring functional consistency</li>
-            <li>Performed root cause analysis and UAT support ensuring alignment with business expectations</li>
+            <li>Tested healthcare applications handling patient data and operational workflows in high-compliance environments</li>
+            <li>Contributed to modernisation of legacy systems into web-based applications, ensuring functional consistency</li>
+            <li>Performed root cause analysis and UAT support, ensuring alignment with business expectations</li>
           </ul>
         </div>
       </div>
 
     </div>
 
-    <!-- EDUCATION -->
-    <div style="margin-top:3.5rem;display:flex;gap:2.5rem;padding:2rem;border:1px solid var(--line);align-items:center;flex-wrap:wrap">
-      <div>
-        <p style="font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.4rem">Education</p>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--ink)">Bachelor of Science — Information Technology</p>
-        <p style="font-size:.8rem;color:var(--muted);margin-top:.2rem">Amity University, Gurgaon &nbsp;·&nbsp; 2014</p>
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <div class="edu-grid">
+      <div class="edu-card">
+        <p class="edu-label">Education</p>
+        <p class="edu-deg">Master of Business Administration (MBA)</p>
+        <p class="edu-meta">Durham University Business School &nbsp;·&nbsp; 2026 – 2027<br>Member, Consulting Club</p>
+      </div>
+      <div class="edu-card">
+        <p class="edu-label">Education</p>
+        <p class="edu-deg">B.Tech — Information Technology</p>
+        <p class="edu-meta">Amity University, Gurgaon &nbsp;·&nbsp; 2014<br>Distinction (CGPA 7.13/10)</p>
+      </div>
+      <div class="edu-card">
+        <p class="edu-label">Certifications</p>
+        <div class="sc-tags" style="margin-top:.6rem"><span class="sc-tag">ISTQB Foundation Level</span><span class="sc-tag">Certified ScrumMaster (CSM)</span><span class="sc-tag">Accenture Generative AI</span><span class="sc-tag">Accenture TQ</span></div>
       </div>
     </div>
   </div>
@@ -449,32 +481,32 @@ footer{border-top:1px solid var(--line);padding:1.5rem 2.5rem;text-align:center;
     <div class="contact-grid">
       <div>
         <p class="sec-eyebrow">Let's Connect</p>
-        <p class="contact-lead">Open to QA Project Management, Program Management &amp; AI roles.</p>
-        <p class="contact-sub">With 11+ years leading enterprise quality programs, cross-functional teams, and AI-driven initiatives, I bring both the strategic mindset and technical depth to make an immediate impact. If your organization values rigour, innovation, and delivery excellence — let's talk.</p>
+        <p class="contact-lead">Open to AI, automation and technology transformation roles.</p>
+        <p class="contact-sub">With nearly 12 years architecting automation, leading distributed teams and taking AI from proof of concept to adoption, I bring both technical depth and a strategic mindset. If you're building something where quality, AI and delivery matter — let's talk.</p>
       </div>
       <div class="contact-links">
         <a class="cl" href="mailto:neha.malik028@gmail.com">
           <div class="cl-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
           <div><p class="cl-label">Email</p><p class="cl-val">neha.malik028@gmail.com</p></div>
         </a>
-        <a class="cl" href="https://www.linkedin.com/in/nehamalik01/" target="_blank">
+        <a class="cl" href="https://www.linkedin.com/in/nehamalik-accenture/" target="_blank">
           <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-          <div><p class="cl-label">LinkedIn</p><p class="cl-val">linkedin.com/in/nehamalik01</p></div>
+          <div><p class="cl-label">LinkedIn</p><p class="cl-val">linkedin.com/in/nehamalik-accenture</p></div>
         </a>
-        <a class="cl" href="tel:+919717321678">
+        <a class="cl" href="tel:+447351945115">
           <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
-          <div><p class="cl-label">Phone</p><p class="cl-val">+91 97 1732 1678</p></div>
+          <div><p class="cl-label">Phone</p><p class="cl-val">+44 7351 945115</p></div>
         </a>
         <div class="cl" style="cursor:default">
           <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><p class="cl-label">Location</p><p class="cl-val">Noida, UP 201304, India</p></div>
+          <div><p class="cl-label">Location</p><p class="cl-val">Durham, United Kingdom</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Neha Malik &nbsp;·&nbsp; Quality Engineering Leader &nbsp;·&nbsp; Noida, India</footer>
+<footer>© 2026 Neha Malik &nbsp;·&nbsp; AI &amp; Quality Engineering Leader &nbsp;·&nbsp; Durham, UK</footer>
 
 </body>
 </html>
