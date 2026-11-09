@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Neha Malik | Software Test Architect and AI Automation Leader</title>
 <meta name="description" content="Neha Malik: software test architect and AI automation leader with nearly 12 years in enterprise quality engineering. Ex-Accenture Associate Manager, Durham MBA 2027.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nehamalik-14.github.io/">
+<meta property="og:title" content="Neha Malik | Software Test Architect and AI Automation Leader">
+<meta property="og:description" content="Nearly 12 years building test automation, CI/CD pipelines and AI tooling for enterprise teams. Ex-Accenture Associate Manager, Durham MBA 2027.">
+<meta property="og:image" content="https://nehamalik-14.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2430'/%3E%3Cpath d='M18 33l9 9 19-20' stroke='%232f8f6b' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -59,7 +68,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-off
 .stages::before{content:"";position:absolute;top:13px;left:calc(100%/12);right:calc(100%/12);height:2px;background:var(--rule)}
 .stages::after{content:"";position:absolute;top:13px;left:calc(100%/12);height:2px;background:var(--pass);width:calc(100% - 100%/6);transform-origin:left;animation:fill 1.6s ease-out .3s both}
 @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.stage{position:relative;z-index:1;text-align:center;padding:0 6px}
+.stage{position:relative;z-index:1;text-align:center;padding:0 4px}
+.stage-btn{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;padding:0 4px 6px;border-radius:8px}
+.stage-btn:hover .stage-role,.stage-btn[aria-pressed="true"] .stage-role{color:var(--signal)}
+.stage-btn[aria-pressed="true"] .stage-org{color:var(--ink-soft)}
+.stage-btn:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.stage-detail{margin-top:22px;padding:18px 20px;border-radius:8px;background:var(--paper);border-left:3px solid var(--signal);min-height:84px}
+.sd-title{font-family:var(--display);font-weight:600;font-size:17px}
+.sd-text{margin-top:4px;color:var(--ink-soft);font-size:16px;max-width:760px}
+.pipeline-hint{font-size:14px;color:var(--muted)}
 .node{width:28px;height:28px;margin:0 auto 14px;border-radius:50%;background:var(--pass);display:grid;place-items:center;animation:pop .35s ease-out both}
 .node svg{width:14px;height:14px;stroke:#fff;stroke-width:3;fill:none}
 .stage:nth-child(1) .node{animation-delay:.35s}.stage:nth-child(2) .node{animation-delay:.6s}.stage:nth-child(3) .node{animation-delay:.85s}
@@ -74,7 +91,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-off
   .stages{grid-template-columns:1fr;gap:18px}
   .stages::before,.stages::after{left:13px;right:auto;top:14px;bottom:14px;width:2px;height:auto}
   .stages::after{transform-origin:top;animation-name:fillv}
-  .stage{display:grid;grid-template-columns:28px 1fr;column-gap:16px;text-align:left;padding:0}
+  .stage{text-align:left;padding:0}
+  .stage-btn{display:grid;grid-template-columns:28px 1fr;column-gap:16px;padding:0}
   .node{margin:0;grid-row:span 3}
 }
 @keyframes fillv{from{transform:scaleY(0)}to{transform:scaleY(1)}}
@@ -115,6 +133,50 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-off
 .panel-feature{background:var(--ink);border-color:var(--ink);color:var(--white)}
 .panel-feature p{color:#c9d2dd}
 .panel-feature a{color:#aab4ff}
+
+/* case study */
+.case{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+.case > div{padding:24px 28px 8px 0}
+.case > div + div{padding-left:28px;border-left:1px solid var(--rule)}
+.case h3{font-family:var(--display);font-weight:600;font-size:20px}
+.case p{margin-top:8px;color:var(--ink-soft);font-size:16px}
+.case ul{margin-top:8px;padding-left:18px;color:var(--ink-soft);font-size:16px}
+.case li{margin-top:6px}
+.case li::marker{color:var(--pass)}
+@media(max-width:860px){.case{grid-template-columns:1fr}.case > div + div{padding-left:0;border-left:none;border-top:1px solid var(--rule)}}
+
+/* demo */
+.demo{margin-top:56px;border:1px solid var(--rule);border-radius:12px;background:var(--white);overflow:hidden}
+.demo-head{padding:26px 28px 0}
+.demo-head h3{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:-.01em}
+.demo-head p{margin-top:6px;color:var(--muted);max-width:680px;font-size:16px}
+.demo-body{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;padding:24px 28px 28px}
+@media(max-width:900px){.demo-body{grid-template-columns:1fr}}
+.demo label{display:block;font-weight:600;font-size:15px;margin-bottom:8px}
+.demo textarea{width:100%;font:inherit;font-size:16px;line-height:1.5;padding:12px 14px;border:1.5px solid var(--rule);border-radius:8px;resize:vertical;color:var(--ink);background:var(--paper)}
+.demo textarea:focus{outline:none;border-color:var(--signal)}
+.samples{margin:12px 0 18px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;color:var(--muted)}
+.chip{font:inherit;font-size:14px;border:1px solid var(--rule);background:var(--white);color:var(--ink-soft);padding:5px 11px;border-radius:99px;cursor:pointer}
+.chip:hover{border-color:var(--signal);color:var(--signal)}
+.demo .btn{border:none;cursor:pointer;font-family:inherit}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--rule);margin-bottom:12px}
+.tab{font:inherit;font-size:15px;font-weight:600;background:none;border:none;border-bottom:2px solid transparent;padding:8px 12px;color:var(--muted);cursor:pointer;margin-bottom:-1px}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--signal)}
+.out-wrap{max-height:420px;overflow:auto}
+.cases{width:100%;border-collapse:collapse;font-size:14.5px}
+.cases th{text-align:left;font-weight:600;color:var(--muted);font-size:13px;padding:8px 10px;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--white)}
+.cases td{padding:10px;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+.cases td:first-child{color:var(--muted);white-space:nowrap}
+.type{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--signal-tint);color:var(--signal);white-space:nowrap}
+.type-Positive{background:var(--pass-tint);color:var(--pass)}
+.gherkin{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;line-height:1.6;background:var(--ink);color:#dbe3ec;padding:16px 18px;border-radius:8px;white-space:pre-wrap}
+.demo-note{margin-top:12px;font-size:13px;color:var(--muted)}
+.copy{font:inherit;font-size:13px;margin-left:10px;padding:3px 10px;border-radius:99px;border:1px solid #3a4a5d;background:transparent;color:#c9d2dd;cursor:pointer;vertical-align:middle}
+.copy:hover{border-color:#aab4ff;color:#fff}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:8px;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50}
+.toast.show{opacity:1}
+.ai-extra{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.ai-extra{grid-template-columns:1fr}}
 
 /* how I work */
 .caps{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:40px 56px}
@@ -201,45 +263,47 @@ footer .wrap{border-top:1px solid #2e3a49;padding-top:24px}
     <div class="pipeline" aria-label="Career pipeline from 2014 to today">
       <div class="pipeline-head">
         <p class="pipeline-title">Career pipeline</p>
+        <p class="pipeline-hint">Select a stage to see what I did there</p>
       </div>
       <ol class="stages">
         <li class="stage">
-          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <button class="stage-btn" type="button" data-i="0" aria-pressed="false"><div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
           <div class="stage-year">2014</div>
           <div class="stage-role">Testing Engineer Analyst</div>
-          <div class="stage-org">NTT DATA</div>
+          <div class="stage-org">NTT DATA</div></button>
         </li>
         <li class="stage">
-          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <button class="stage-btn" type="button" data-i="1" aria-pressed="false"><div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
           <div class="stage-year">2018</div>
           <div class="stage-role">Senior Software Engineer</div>
-          <div class="stage-org">Sopra Steria</div>
+          <div class="stage-org">Sopra Steria</div></button>
         </li>
         <li class="stage">
-          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <button class="stage-btn" type="button" data-i="2" aria-pressed="false"><div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
           <div class="stage-year">2019</div>
           <div class="stage-role">Senior Test Analyst</div>
-          <div class="stage-org">NTT DATA</div>
+          <div class="stage-org">NTT DATA</div></button>
         </li>
         <li class="stage">
-          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <button class="stage-btn" type="button" data-i="3" aria-pressed="false"><div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
           <div class="stage-year">2021</div>
           <div class="stage-role">Senior Test Lead</div>
-          <div class="stage-org">HCL Technologies</div>
+          <div class="stage-org">HCL Technologies</div></button>
         </li>
         <li class="stage">
-          <div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
+          <button class="stage-btn" type="button" data-i="4" aria-pressed="false"><div class="node"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></div>
           <div class="stage-year">2022 to 2026</div>
           <div class="stage-role">Test Architect to AI Enablement Lead</div>
-          <div class="stage-org">Accenture</div>
+          <div class="stage-org">Accenture</div></button>
         </li>
         <li class="stage">
-          <div class="node running" aria-label="In progress"></div>
+          <button class="stage-btn" type="button" data-i="5" aria-pressed="false"><div class="node running" aria-label="In progress"></div>
           <div class="stage-year">Now</div>
           <div class="stage-role">MBA candidate and Venture Capitalist</div>
-          <div class="stage-org">Durham University and EduDAG</div>
+          <div class="stage-org">Durham University and EduDAG</div></button>
         </li>
       </ol>
+      <div class="stage-detail" id="stage-detail" aria-live="polite"></div>
     </div>
   </div>
 </section>
@@ -270,25 +334,65 @@ footer .wrap{border-top:1px solid #2e3a49;padding-top:24px}
 <section class="section" id="ai">
   <div class="wrap">
     <h2>Taking AI from proof of concept to everyday tooling</h2>
-    <p class="section-intro">At Accenture I led a proof of concept that put large language models to work across the whole automation lifecycle, so entry-level engineers could create and run scripts without deep programming knowledge. Teams across multiple projects went on to adopt it.</p>
-    <div class="ai-grid">
-      <ol class="flow" aria-label="Where AI fits in my automation lifecycle">
-        <li><h3>Start from the requirement</h3><p>User stories and requirements are the starting point for test design.</p></li>
-        <li><h3>Generate test cases with an LLM</h3><p>The model drafts test cases, including edge cases that are easy to miss by hand.</p></li>
-        <li><h3>Execute them as automation</h3><p>Generated cases run as automated scripts, so less experienced engineers can contribute without deep coding.</p></li>
-        <li><h3>Run in the pipeline</h3><p>Automated suites run in Jenkins and Azure DevOps CI/CD pipelines, versioned in Git.</p></li>
-        <li><h3>Report and improve</h3><p>QA dashboards track coverage, defects and release readiness.</p></li>
-      </ol>
-      <div class="ai-side">
-        <div class="panel panel-feature">
-          <h3>Rethinking QA: AI-Driven Test Automation in Practice</h3>
-          <p>My whitepaper on why conventional automation hits structural limits, and how LLMs, predictive defect analysis and self-healing automation address them, with findings from digital twin systems in energy.</p>
-          <a href="whitepaper.html">Read the whitepaper</a>
+    <p class="section-intro">A closer look at the LLM-based automation framework I led at Accenture, and a small demo you can try right here.</p>
+    <div class="case">
+      <div>
+        <h3>The problem</h3>
+        <p>Turning test cases into automation needed strong scripting skills, so much of the work stayed manual. The programme relied on a team of 10 manual testers.</p>
+      </div>
+      <div>
+        <h3>What I built</h3>
+        <p>A framework that uses large language models across the automation lifecycle, from test case generation to execution, so entry-level engineers can create and run scripts without deep programming knowledge.</p>
+        <p>I took end-to-end technical ownership and ran training sessions so teams could adopt it.</p>
+      </div>
+      <div>
+        <h3>The outcome</h3>
+        <ul>
+          <li>70% productivity gain</li>
+          <li>10 manual testers to 3 automation testers</li>
+          <li>Less onboarding effort and faster script creation</li>
+          <li>Adopted across multiple Accenture projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo" id="demo">
+      <div class="demo-head">
+        <h3>Try it: turn a user story into test cases</h3>
+        <p>A small version of the idea that runs in your browser. Edit the story or pick a sample, then generate.</p>
+      </div>
+      <div class="demo-body">
+        <div>
+          <label for="story">User story</label>
+          <textarea id="story" rows="5">As a traveller, I want to pay for my booking with a saved card so that checkout is faster.</textarea>
+          <div class="samples"><span>Samples:</span>
+            <button class="chip" type="button" data-sample="As a traveller, I want to pay for my booking with a saved card so that checkout is faster.">Airline payment</button>
+            <button class="chip" type="button" data-sample="As a plant operator, I want to see live sensor readings in the digital twin so that I can spot faults early.">Digital twin</button>
+            <button class="chip" type="button" data-sample="As a policyholder, I want to upload a claim document so that my claim is processed quickly.">Insurance claim</button>
+          </div>
+          <button class="btn btn-solid" id="generate" type="button">Generate test cases</button>
+          <p class="demo-note">This demo uses simple rules so it works instantly in your browser. The real framework used large language models.</p>
         </div>
-        <div class="panel">
-          <h3>Further proofs of concept</h3>
-          <p>I work alongside teams on new AI experiments, including predictive defect analysis on historical test data and prompt engineering for better scenario coverage.</p>
+        <div>
+          <div class="tabs" role="tablist" aria-label="Output format">
+            <button class="tab" role="tab" type="button" aria-selected="true" data-view="table">Test cases</button>
+            <button class="tab" role="tab" type="button" aria-selected="false" data-view="gherkin">Gherkin</button>
+          </div>
+          <div class="out-wrap" id="out-table"></div>
+          <pre class="gherkin out-wrap" id="out-gherkin" hidden></pre>
         </div>
+      </div>
+    </div>
+
+    <div class="ai-extra">
+      <div class="panel panel-feature">
+        <h3>Rethinking QA: AI-Driven Test Automation in Practice</h3>
+        <p>My whitepaper on why conventional automation hits structural limits, and how LLMs, predictive defect analysis and self-healing automation address them, with findings from digital twin systems in energy.</p>
+        <a href="whitepaper.html">Read the whitepaper</a>
+      </div>
+      <div class="panel">
+        <h3>Further proofs of concept</h3>
+        <p>I work alongside teams on new AI experiments, including predictive defect analysis on historical test data and prompt engineering for better scenario coverage.</p>
       </div>
     </div>
   </div>
@@ -430,8 +534,8 @@ footer .wrap{border-top:1px solid #2e3a49;padding-top:24px}
     <h2>Building something where quality and AI both matter? Let's talk.</h2>
     <p>I'm open to AI, test automation and technology transformation roles.</p>
     <ul class="contact-list">
-      <li><span>Email</span><a href="mailto:neha.malik028@gmail.com">neha.malik028@gmail.com</a></li>
-      <li><span>Email</span><a href="mailto:nehamal3223@gmail.com">nehamal3223@gmail.com</a></li>
+      <li><span>Email</span><a href="mailto:neha.malik028@gmail.com">neha.malik028@gmail.com</a><button class="copy" type="button" data-copy="neha.malik028@gmail.com">Copy</button></li>
+      <li><span>Email</span><a href="mailto:nehamal3223@gmail.com">nehamal3223@gmail.com</a><button class="copy" type="button" data-copy="nehamal3223@gmail.com">Copy</button></li>
       <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/nehamalik-accenture/" target="_blank" rel="noopener">nehamalik-accenture</a></li>
       <li><span>Phone, UK</span><a href="tel:+447351945115">+44 7351 945115</a></li>
       <li><span>Phone, India</span><a href="tel:+919717321678">+91 9717321678</a></li>
@@ -440,6 +544,187 @@ footer .wrap{border-top:1px solid #2e3a49;padding-top:24px}
   </div>
 </section>
 <footer><div class="wrap">© 2026 Neha Malik</div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  var NL = String.fromCharCode(10);
+
+  // career timeline: show details for the selected stage
+  var stages = [
+    { t: 'Testing Engineer Analyst at NTT DATA, 2014 to 2018', d:'Started at Dell Services, which became part of NTT DATA. Tested healthcare applications in high-compliance environments and supported the move from legacy systems to web applications.' },
+    { t: 'Senior Software Engineer at Sopra Steria, 2018 to 2019', d:'Led web, mobile and API testing for easyJet booking, payment and flight management journeys, including GDPR and privacy validation.' },
+    { t: 'Senior Test Analyst at NTT DATA, 2019 to 2021', d:'Built a Selenium and Java automation framework from scratch and cut manual regression effort by over 50% within two quarters on healthcare and insurance platforms.' },
+    { t: 'Senior Test Lead at HCL Technologies, 2021 to 2022', d:'Directed QA for enterprise applications and set risk-based testing strategies with stakeholders.' },
+    { t: 'Associate Manager at Accenture, 2022 to 2026', d:'Grew from Senior Test Architect to Test Manager and AI Enablement and Automation Lead. Led an LLM-based automation framework adopted across projects, quality engineering for digital twin delivery at 12+ facilities, and a team of 15 across India, the US and Australia.' },
+    { t: 'Now: Durham University and EduDAG', d: "MBA candidate at Durham University Business School, adding strategy and finance to my engineering background. Venture Capitalist at EduDAG, an MBA and Master's admissions consultancy." }
+  ];
+  var stageBtns = document.querySelectorAll('.stage-btn');
+  var detail = document.getElementById('stage-detail');
+  function showStage(i) {
+    for (var k = 0; k < stageBtns.length; k++) {
+      stageBtns[k].setAttribute('aria-pressed', k === i ? 'true' : 'false');
+    }
+    detail.innerHTML = '';
+    var title = document.createElement('p');
+    title.className = 'sd-title';
+    title.textContent = stages[i].t;
+    var text = document.createElement('p');
+    text.className = 'sd-text';
+    text.textContent = stages[i].d;
+    detail.appendChild(title);
+    detail.appendChild(text);
+  }
+  for (var s = 0; s < stageBtns.length; s++) {
+    stageBtns[s].addEventListener('click', (function (i) {
+      return function () { showStage(i); };
+    })(s));
+  }
+  if (detail && stageBtns.length) showStage(4);
+
+  // demo: user story to test cases
+  function between(str, start, stops) {
+    var i = str.indexOf(start);
+    if (i < 0) return '';
+    i += start.length;
+    var end = str.length;
+    for (var j = 0; j < stops.length; j++) {
+      var e = str.indexOf(stops[j], i);
+      if (e >= 0 && e < end) end = e;
+    }
+    return str.slice(i, end).trim();
+  }
+  function swapPronouns(text) {
+    var map = { my: 'their', i: 'they', me: 'them', mine: 'theirs', myself: 'themselves', we: 'they', our: 'their', us: 'them' };
+    return text.split(' ').map(function (w) { return map[w] !== undefined ? map[w] : w; }).join(' ');
+  }
+  function has(text, words) {
+    for (var i = 0; i < words.length; i++) { if (text.indexOf(words[i]) >= 0) return true; }
+    return false;
+  }
+  function cap(text) { return text ? text.charAt(0).toUpperCase() + text.slice(1) : text; }
+  function low1(text) { return text ? text.charAt(0).toLowerCase() + text.slice(1) : text; }
+
+  function parseStory(text) {
+    var low = text.trim().toLowerCase();
+    var actor = between(low, 'as an ', [',', ' i want']) || between(low, 'as a ', [',', ' i want']) || 'user';
+    var goal = between(low, 'i want to ', [' so that', '.']) || between(low, 'i want ', [' so that', '.']);
+    if (!goal) goal = low.split('.').join('');
+    var benefit = between(low, 'so that ', ['.']);
+    return { actor: actor, goal: swapPronouns(goal), benefit: swapPronouns(benefit), low: low };
+  }
+
+  function buildCases(st) {
+    var a = st.actor, g = st.goal, low = st.low;
+    var list = [
+      ['Positive', 'The ' + a + ' can ' + g + ' with valid details', 'The action completes and the ' + a + ' sees a clear confirmation'],
+      ['Negative', 'The ' + a + ' tries to ' + g + ' with required details missing', 'Each missing field is flagged and nothing is saved'],
+      ['Negative', 'The ' + a + ' tries to ' + g + ' with data in the wrong format', 'The input is rejected with a specific, helpful message'],
+      ['Edge', 'Boundary values: maximum lengths, special characters and non-English text', 'Data is handled consistently and stored without corruption'],
+      ['Security', 'Someone without permission tries to ' + g, 'Access is denied and the attempt is logged'],
+      ['Resilience', 'The connection drops while the ' + a + ' tries to ' + g, 'A clear error is shown and no partial or duplicate record is created']
+    ];
+    if (has(low, ['pay', 'card', 'checkout', 'payment'])) list.push(['Negative', 'The payment provider declines the card', 'The ' + a + ' is told why, can retry, and is never charged twice']);
+    if (has(low, ['upload', 'document', 'file', 'attach'])) list.push(['Negative', 'The file is too large or an unsupported type', 'The upload is blocked and the allowed size and formats are explained']);
+    if (has(low, ['log in', 'login', 'sign in', 'password'])) list.push(['Security', 'Repeated failed sign-in attempts', 'The account is temporarily locked and recovery steps are shown']);
+    if (has(low, ['search', 'find', 'filter'])) list.push(['Edge', 'A search that returns no results', 'A helpful empty state suggests what to try next']);
+    if (has(low, ['live', 'real-time', 'sensor', 'reading', 'dashboard'])) list.push(['Performance', 'Readings arrive in bursts or a sensor stops reporting', 'The view stays current, gaps are flagged and nothing freezes']);
+    list.push(['Accessibility', 'Complete the journey with only a keyboard and a screen reader', 'Every step is reachable, labelled and announced']);
+    if (st.benefit) list.push(['Regression', 'Related journeys after the change ships', 'Existing flows still work and the goal still holds: ' + st.benefit]);
+    return list;
+  }
+
+  var story = document.getElementById('story');
+  var outTable = document.getElementById('out-table');
+  var outGherkin = document.getElementById('out-gherkin');
+
+  function render() {
+    if (!story) return;
+    var text = story.value.trim();
+    outTable.innerHTML = '';
+    if (!text) {
+      var empty = document.createElement('p');
+      empty.className = 'demo-note';
+      empty.textContent = 'Write a user story on the left, for example: As a customer, I want to reset my password so that I can sign in again.';
+      outTable.appendChild(empty);
+      outGherkin.textContent = '';
+      return;
+    }
+    var st = parseStory(text);
+    var cases = buildCases(st);
+
+    var table = document.createElement('table');
+    table.className = 'cases';
+    var head = document.createElement('tr');
+    ['ID', 'Type', 'Scenario', 'Expected result'].forEach(function (h) {
+      var th = document.createElement('th'); th.textContent = h; head.appendChild(th);
+    });
+    var thead = document.createElement('thead'); thead.appendChild(head); table.appendChild(thead);
+    var tbody = document.createElement('tbody');
+    cases.forEach(function (c, i) {
+      var tr = document.createElement('tr');
+      var id = document.createElement('td'); id.textContent = 'TC-' + (i + 1 < 10 ? '0' : '') + (i + 1);
+      var type = document.createElement('td');
+      var tag = document.createElement('span'); tag.className = 'type type-' + c[0]; tag.textContent = c[0]; type.appendChild(tag);
+      var sc = document.createElement('td'); sc.textContent = cap(c[1]);
+      var ex = document.createElement('td'); ex.textContent = c[2];
+      tr.appendChild(id); tr.appendChild(type); tr.appendChild(sc); tr.appendChild(ex);
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    outTable.appendChild(table);
+
+    var g = 'Feature: ' + cap(st.goal) + NL;
+    if (st.benefit) g += '  So that ' + st.benefit + NL;
+    cases.forEach(function (c) {
+      g += NL + '  Scenario: ' + cap(c[1]) + NL;
+      g += '    Given the ' + st.actor + ' has access to the system' + NL;
+      g += '    When the scenario above is carried out' + NL;
+      g += '    Then ' + low1(c[2]) + NL;
+    });
+    outGherkin.textContent = g;
+  }
+
+  var genBtn = document.getElementById('generate');
+  if (genBtn) genBtn.addEventListener('click', render);
+  var chips = document.querySelectorAll('.chip');
+  for (var c = 0; c < chips.length; c++) {
+    chips[c].addEventListener('click', function () {
+      story.value = this.getAttribute('data-sample');
+      render();
+    });
+  }
+  var tabs = document.querySelectorAll('.tab');
+  for (var t = 0; t < tabs.length; t++) {
+    tabs[t].addEventListener('click', function () {
+      for (var k = 0; k < tabs.length; k++) tabs[k].setAttribute('aria-selected', tabs[k] === this ? 'true' : 'false');
+      var showTable = this.getAttribute('data-view') === 'table';
+      outTable.hidden = !showTable;
+      outGherkin.hidden = showTable;
+    });
+  }
+  render();
+
+  // copy email buttons
+  var toast = document.getElementById('toast');
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(function () { toast.classList.remove('show'); }, 1800);
+  }
+  var copies = document.querySelectorAll('.copy');
+  for (var x = 0; x < copies.length; x++) {
+    copies[x].addEventListener('click', function () {
+      var value = this.getAttribute('data-copy');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(function () { showToast('Email copied'); }, function () { showToast(value); });
+      } else {
+        showToast(value);
+      }
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
