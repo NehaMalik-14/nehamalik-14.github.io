@@ -55,8 +55,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-off
 .pipeline{margin-top:72px;background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:28px 28px 24px}
 .pipeline-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:26px}
 .pipeline-title{font-family:var(--display);font-weight:600;font-size:18px}
-.pipeline-status{font-size:14px;color:var(--pass);font-weight:600;display:flex;align-items:center;gap:8px}
-.pipeline-status::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--pass)}
 .stages{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);position:relative}
 .stages::before{content:"";position:absolute;top:13px;left:calc(100%/12);right:calc(100%/12);height:2px;background:var(--rule)}
 .stages::after{content:"";position:absolute;top:13px;left:calc(100%/12);height:2px;background:var(--pass);width:calc(100% - 100%/6);transform-origin:left;animation:fill 1.6s ease-out .3s both}
@@ -203,7 +201,6 @@ footer .wrap{border-top:1px solid #2e3a49;padding-top:24px}
     <div class="pipeline" aria-label="Career pipeline from 2014 to today">
       <div class="pipeline-head">
         <p class="pipeline-title">Career pipeline</p>
-        <p class="pipeline-status">5 stages passed, 1 running</p>
       </div>
       <ol class="stages">
         <li class="stage">
